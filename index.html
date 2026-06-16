@@ -216,7 +216,6 @@
     <h2>SOLICITE UM<br>DIAGNÓSTICO<br>TÉCNICO GRATUITO</h2>
     <p>Resposta imediata.</p>
     
-    <!-- Barra de progresso com 4 passos -->
     <div class="progress-container">
       <div class="progress-bar active" id="pb-1"></div>
       <div class="progress-bar" id="pb-2"></div>
@@ -227,7 +226,6 @@
 
   <form id="form-diagnostico" onsubmit="enviarFormulario(event)">
     
-    <!-- ETAPA 1 -->
     <div class="step-content active" id="step-1">
       <span class="step-title">PASSO 1 DE 4:</span>
       
@@ -241,7 +239,6 @@
       <button type="button" class="btn-submit" onclick="irParaPasso(2)">Continuar</button>
     </div>
 
-    <!-- ETAPA 2 -->
     <div class="step-content" id="step-2">
       <span class="step-title">PASSO 2 DE 4:</span>
       
@@ -249,7 +246,6 @@
         <input type="text" id="cargo" placeholder="Cargo:" required>
       </div>
       <div class="form-group">
-        <!-- Input de WhatsApp com máscara automática -->
         <input type="tel" id="whatsapp" placeholder="WhatsApp:" required oninput="mascaraWhatsApp(this)" maxlength="13">
       </div>
 
@@ -257,7 +253,6 @@
       <button type="button" class="btn-back" onclick="voltarParaPasso(1)">← Voltar</button>
     </div>
 
-    <!-- ETAPA 3 -->
     <div class="step-content" id="step-3">
       <span class="step-title">PASSO 3 DE 4:</span>
       
@@ -276,7 +271,6 @@
       <button type="button" class="btn-back" onclick="voltarParaPasso(2)">← Voltar</button>
     </div>
 
-    <!-- ETAPA 4 -->
     <div class="step-content" id="step-4">
       <span class="step-title">PASSO 4 DE 4:</span>
       
@@ -377,7 +371,7 @@
       return;
     }
 
-    // Redirecionamento para a página de obrigado
-    window.location.href = "https://lp2.ofos.com.br/obrigado-pelo-cadastro-lp2";
+    // Redirecionamento para a página de obrigado saindo do iframe
+    window.top.location.href = "https://lp2.ofos.com.br/obrigado-pelo-cadastro-lp2";
   }
 </script>
